@@ -1,0 +1,47 @@
+button
+{
+    background-color: white;
+    margin-right: 15px;
+    margin-left: 15px;
+    border-radius: 10px;
+    width: 125px;
+}
+
+.center_margin
+{
+    padding: 20px 0;
+    text-align: center;
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+.caption_text
+{
+    padding: 10px 0;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.header_format
+{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.sub_heading_format
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bottom_space
+{
+    margin-bottom: 30px;
+}
+
+.nav-link
+{
+    color: black;
+}
+

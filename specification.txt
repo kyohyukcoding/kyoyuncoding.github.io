@@ -1,0 +1,31 @@
+10 HTML tags (excluding <html>, <head>, <body>, and <title>)
+
+<style>
+<div>
+<button>
+<h3>
+<h2>
+<p>
+<iframe>
+<img>
+<link>
+<script>
+
+5 CSS properties
+
+background-color
+margin-right
+margin-left
+border-radius
+padding
+
+Bootstrap & JS Features
+
+Bootstrap: Add a nav for the buttons rather than just having free floating buttons.
+
+JS: When a mouse is hovering over an image, it shows the caption and title of the image.
+    When a mouse is not hovering over an image, it hides the caption and title of the image.
+
+
+
+
