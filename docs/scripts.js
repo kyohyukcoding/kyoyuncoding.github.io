@@ -32,3 +32,24 @@ document.querySelector("#i_f_img").addEventListener('mouseout', function() {
     document.querySelector("#i_f").style.visibility = 'hidden';
 });
 
+// Event listener function that shows text when the mouse is hovering over the "The Fighter" image
+// and hides it when the mouse is not hovering over.
+
+document.querySelector("#t_f_img").addEventListener('mouseover', function() {
+    document.querySelector("#t_f").style.visibility = 'visible';
+});
+
+document.querySelector("#t_f_img").addEventListener('mouseout', function() {
+    document.querySelector("#t_f").style.visibility = 'hidden';
+});
+
+// Event listener function that shows text when the mouse is hovering over the "Baby, Psycho?" image
+// and hides it when the mouse is not hovering over.
+
+document.querySelector("#b_p_img").addEventListener('mouseover', function() {
+    document.querySelector("#b_p").style.visibility = 'visible';
+});
+
+document.querySelector("#b_p_img").addEventListener('mouseout', function() {
+    document.querySelector("#b_p").style.visibility = 'hidden';
+});
