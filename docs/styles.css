@@ -68,6 +68,22 @@ button
     }
 }
 
+@media(min-width: 600px) 
+{
+    .index-title
+    {
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 600px) 
+{
+    .index-subheading
+    {
+        font-size: 18.72px;
+    }
+}
+
 .flex-text
 {
     display: flex;
