@@ -92,4 +92,22 @@ button
     align-items: center;
 }
 
+@media(min-width: 600px)
+{
+    .embed-video
+    {
+        text-align: center;
+        width: 560px; 
+        height: 315px;
+    }
+}
 
+@media(max-width: 600px)
+{
+    .embed-video
+    {
+        text-align: center;
+        width: 250px; 
+        height: 141px;
+    }
+}
