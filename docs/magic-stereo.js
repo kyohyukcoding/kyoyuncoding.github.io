@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         fetch(`https://api.reccobeats.com/v1/track/recommendation?size=${numberOfSongs}&seeds=${spotifyID}`)
         .then(response => response.json())
-        .then()
+        .then(data => {
+            
+        })
     }
 })
