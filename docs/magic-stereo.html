@@ -9,9 +9,16 @@
         <script src="magic-stereo.js"></script>
     </head>
     <body>
-        <h2 style="text-align: center; margin-top: 30px; margin-bottom: 20px;">Welcome to the Magic Stereo!</h2>
+        <ul class="nav justify-content-center" style = "margin-top: 10px">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <h2 style="text-align: center; margin-top: 6%; margin-bottom: 20px;">Welcome to the Magic Stereo!</h2>
         <form id="parameters-form"style="margin-top: 30px; height: 25px; text-align: center;">
-            <input id="song-id" style="width: 400px;"type="text" placeholder="Enter the Spotify URL of your favourite track!">
+            <input class="spotify-url-input-phone-size spotify-url-input-desktop-size" id="song-id" type="text" placeholder="Enter the Spotify URL of your favourite track!">
             <div style="display: grid; grid-template-columns: 125px 125px 50px; grid-template-rows: 40px 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 20px;">
 
                 <label style="grid-row-start: 1; grid-column-start: 1; text-align: left" for="acousticness-range">Acoustic? </label>

@@ -124,3 +124,20 @@ a
 {
     text-decoration: none;
 }
+
+@media(max-width: 600px) 
+{
+    .spotify-url-input-phone-size
+    {
+        width: 335px;
+    }
+}
+
+@media(min-width: 600px) 
+{
+    .spotify-url-input-desktop-size
+    {
+        width: 400px;
+    }
+}
+
