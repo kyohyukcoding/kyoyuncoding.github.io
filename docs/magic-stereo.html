@@ -16,36 +16,36 @@
                 </a>
             </li>
         </ul>
-        <h2 style="text-align: center; margin-top: 6%; margin-bottom: 30px;">Welcome to the Magic Stereo!</h2>
+        <h2 style="text-align: center; margin-top: 5%; margin-bottom: 30px;">Welcome to the Magic Stereo!</h2>
         <form id="parameters-form"style="margin-top: 35px; height: 25px; text-align: center;">
             <input class="spotify-url-input-phone-size spotify-url-input-desktop-size" id="song-id" type="text" placeholder="Enter the Spotify URL of your favourite track!">
             <div style="display: grid; grid-template-columns: 50px 110px 125px 50px; grid-template-rows: 40px 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 30px;">
-                <input style="grid-row-start: 1; grid-column-start: 1;" id="acousticness-checkbox" type="checkbox">
+                <input style="grid-row-start: 1; grid-column-start: 1;" id="acousticness-checkbox" class="checkbox" type="checkbox">
                 <label style="grid-row-start: 1; grid-column-start: 2; text-align: left" for="acousticness-range">Acoustic? </label>
-                <input style="grid-row-start: 1; grid-column-start: 3;" min="0" max="100" id="acousticness-range" type="range" disabled>
-                <text style="grid-row-start: 1; grid-column-start: 4;" id="acousticness-value">0.5</text>
+                <input style="grid-row-start: 1; grid-column-start: 3;" min="0" max="100" id="acousticness-range" class="range" type="range" disabled>
+                <text class="range-value" style="grid-row-start: 1; grid-column-start: 4;" id="acousticness-value">0.5</text>
 
-                <input style="grid-row-start: 2; grid-column-start: 1;" id="danceability-checkbox" type="checkbox">
+                <input style="grid-row-start: 2; grid-column-start: 1;" id="danceability-checkbox" class="checkbox" type="checkbox">
                 <label style="grid-row-start: 2; grid-column-start: 2; text-align: left" for="danceability-range">Danceable?</label>
-                <input style="grid-row-start: 2; grid-column-start: 3;" min="0" max="100" id="danceability-range" type="range" disabled>
-                <text style="grid-row-start: 2; grid-column-start: 4;" id="danceability-value">0.5</text>
+                <input style="grid-row-start: 2; grid-column-start: 3;" min="0" max="100" id="danceability-range" class="range" type="range" disabled>
+                <text class="range-value" style="grid-row-start: 2; grid-column-start: 4;" id="danceability-value">0.5</text>
 
-                <input style="grid-row-start: 3; grid-column-start: 1;" id="energy-checkbox" type="checkbox">
+                <input style="grid-row-start: 3; grid-column-start: 1;" id="energy-checkbox" class="checkbox" type="checkbox">
                 <label style="grid-row-start: 3; grid-column-start: 2; text-align: left" for="energy-range">Energetic? </label>
-                <input style="grid-row-start: 3; grid-column-start: 3;" min="0" max="100" id="energy-range" type="range" disabled>
-                <text style="grid-row-start: 3; grid-column-start: 4;" id="energy-value">0.5</text>
+                <input style="grid-row-start: 3; grid-column-start: 3;" min="0" max="100" id="energy-range" class="range" type="range" disabled>
+                <text class="range-value" style="grid-row-start: 3; grid-column-start: 4;" id="energy-value">0.5</text>
 
-                <input style="grid-row-start: 4; grid-column-start: 1;" id="instrumentalness-checkbox" type="checkbox">
+                <input style="grid-row-start: 4; grid-column-start: 1;" id="instrumentalness-checkbox" class="checkbox" type="checkbox">
                 <label style="grid-row-start: 4; grid-column-start: 2; text-align: left" for="instrumentalness-range">Instrumental? </label>
-                <input style="grid-row-start: 4; grid-column-start: 3;" min="0" max="100"id="instrumentalness-range" type="range" disabled>
-                <text style="grid-row-start: 4; grid-column-start: 4;" id="instrumentalness-value">0.5</text>
+                <input style="grid-row-start: 4; grid-column-start: 3;" min="0" max="100"id="instrumentalness-range" class="range" type="range" disabled>
+                <text class="range-value" style="grid-row-start: 4; grid-column-start: 4;" id="instrumentalness-value">0.5</text>
                 
-                <input style="grid-row-start: 5; grid-column-start: 1;" id="popularity-checkbox" type="checkbox">
+                <input style="grid-row-start: 5; grid-column-start: 1;" id="popularity-checkbox" class="checkbox" type="checkbox">
                 <label style="grid-row-start: 5; grid-column-start: 2; text-align: left" for="popularity-range">Popularity? </label>
-                <input style="grid-row-start: 5; grid-column-start: 3;" min="0" max="100"id="popularity-range" type="range" disabled>
-                <text style="grid-row-start: 5; grid-column-start: 4;" id="popularity-value">0.5</text>
+                <input style="grid-row-start: 5; grid-column-start: 3;" min="0" max="100"id="popularity-range" class="range" type="range" disabled>
+                <text class="range-value" style="grid-row-start: 5; grid-column-start: 4;" id="popularity-value">0.5</text>
             </div>
-            <input style="margin-top: 35px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Make Playlist!">
+            <input style="margin-top: 25px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Make Playlist!">
             <p style="text-align: center; color: red; margin-top: 20px; margin-bottom: 20px;" id="error-messages"></p>
         </form>
         <table id="song-recommendations" class="table-borders" style="margin: auto; margin-top: 315px; margin-bottom: 30px; display: none">

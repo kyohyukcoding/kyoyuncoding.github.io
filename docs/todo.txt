@@ -1,21 +1,20 @@
 TODO:
-
 6. Link with Spotify API to create playlist for user based on the recommended songs.
 7. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
-8. Add buttons next to the range sliders which can disable the range sliders from working.
 9. Add example messages to each of the sliders if they are being hovered over.
+10. Make it so that the seed track and the parameters are shown in the table as well.
 
 DONE:
-
 2. Make the table reset each time the request is made.
 4. Add a number which changes based on the value of the sliders next to the values.
 9. Maybe remove the number of songs input so that it just creates you a playlist easily rather than having to faff about with how many songs you want on a playlist.
 5. Add the range parameters to the API request.
 10. Make design responsive for mobile and desktop.
 1. Add error handling to the API code. Make sure that it gives a warning or error code if the URI is incorrect, or if the formatting is wrong.
+8. Add buttons next to the range sliders which can disable the range sliders from working.
+10. Make it so that when I disable a parameter, it doesn't include it from the query.
 
 LEARNT:
-
 1. Use 'innerHTML = ""' to clear the child elements of a HTML element.
 2. To set the colSpan of a <th> or <td> element, just do "element.Colspan = x".
 3. To create a slider input, do <input type="range">.
@@ -23,3 +22,4 @@ LEARNT:
 5. Altering the value of an html element only works if it is an input, form, textarea, select etc (editable).
 6. Use innerhtml to change the actual html of the element, use textContent to just change the text inside an element. textContent is faster and safer.
 7. Use the 'disabled' attribute to disable an input element.
+8. Use a lookup object instead of ternary operators to assign variable names.
