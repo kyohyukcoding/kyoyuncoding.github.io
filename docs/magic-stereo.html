@@ -45,10 +45,15 @@
                 <input style="grid-row-start: 5; grid-column-start: 3;" min="0" max="100"id="popularity-range" class="range" type="range" disabled>
                 <text class="range-value" style="grid-row-start: 5; grid-column-start: 4;" id="popularity-value">0.5</text>
             </div>
-            <input style="margin-top: 25px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Make Playlist!">
+            <input class="button" style="margin-top: 25px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Make Playlist!">
             <p style="text-align: center; color: red; margin-top: 20px; margin-bottom: 20px;" id="error-messages"></p>
         </form>
-        <table id="song-recommendations" class="table-borders" style="margin: auto; margin-top: 315px; margin-bottom: 30px; display: none">
-        </table>
+        <dialog style="border-color: rgb(179, 179, 179);">
+            <table id="song-recommendations" class="table-borders" style="margin: auto; padding: 30px;">
+            </table>  
+            <div style="display: flex; justify-content: center; align-items: center; margin-top: 15px;">
+                <input class="button" type="submit" onclick="closeModal()" value="Close">          
+            </div>
+        </dialog>
     </body>
 </html>

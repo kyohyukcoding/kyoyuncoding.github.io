@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
             {
                 let trHeaderRow = document.createElement('tr');
                 let thTitleHeader = document.createElement('th');
-                thTitleHeader.textContent = "Track Recommendations Table";
-                thTitleHeader.colSpan = 3;
+                thTitleHeader.textContent = "Track Recommendations";
+                thTitleHeader.colSpan = 4;
                 trHeaderRow.append(thTitleHeader);
                 table.append(trHeaderRow);
 
@@ -26,19 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 let thColumnNameArtist = document.createElement('th');
                 let thColumnNameSongTitle = document.createElement('th');
                 let thColumnNameSongLink = document.createElement('th');
+                let thColumnNameNumber = document.createElement('th');
 
                 thColumnNameArtist.textContent = "Artist(s)";
                 thColumnNameSongTitle.textContent = "Track Title"
                 thColumnNameSongLink.textContent = "Link"
+                thColumnNameNumber.textContent = "No."
 
+                trColumnNames.append(thColumnNameNumber);
                 trColumnNames.append(thColumnNameArtist);
                 trColumnNames.append(thColumnNameSongTitle);
                 trColumnNames.append(thColumnNameSongLink);
                 table.append(trColumnNames);
 
+                let counter = 0;
+
                 data["content"].forEach(title => {
 
+                    counter++;
+
                     let tr = document.createElement('tr');
+
+                    let tdCounter = document.createElement('td');
+                    tdCounter.textContent = `${counter}.`;
 
                     let tdArtist = document.createElement('td');
                     tdArtist.textContent = title["artists"][0]["name"];
@@ -48,18 +58,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                     let tdSongLink = document.createElement('td');
                     let songLink = document.createElement('a');
+
                     songLink.href = title["href"];
                     songLink.textContent = "Link";
                     tdSongLink.appendChild(songLink);
 
+                    tr.appendChild(tdCounter);
                     tr.appendChild(tdArtist);
                     tr.appendChild(tdTrackTitle);
                     tr.appendChild(tdSongLink);
 
                     table.appendChild(tr);
                 });
+                document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
-                document.querySelector("#song-recommendations").style.display = "";
             }
             else
             {
@@ -193,4 +205,8 @@ function resetAll() {
         range[i].value = 50;
         rangeValue[i].textContent = 0.5;
     }
+}
+
+function closeModal() {
+    document.querySelector("dialog").close();
 }

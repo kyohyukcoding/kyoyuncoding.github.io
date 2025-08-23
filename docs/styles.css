@@ -1,10 +1,7 @@
-button
+.button
 {
     background-color: white;
-    margin-right: 15px;
-    margin-left: 15px;
     border-radius: 10px;
-    width: 125px;
 }
 
 .center_margin
