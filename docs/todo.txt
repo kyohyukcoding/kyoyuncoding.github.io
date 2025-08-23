@@ -22,3 +22,4 @@ LEARNT:
 4. To change an element whilst something is being activated useoninput="alert('clicked!')".
 5. Altering the value of an html element only works if it is an input, form, textarea, select etc (editable).
 6. Use innerhtml to change the actual html of the element, use textContent to just change the text inside an element. textContent is faster and safer.
+7. Use the 'disabled' attribute to disable an input element.

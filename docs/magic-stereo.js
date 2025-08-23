@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+    // TODO: Define Variables that will be used constantly.
+
     document.querySelector("#parameters-form").onsubmit = () => {
         let table = document.querySelector("#song-recommendations");
         table.innerHTML = "";  
@@ -88,5 +91,77 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let popularityValue = document.querySelector("#popularity-range").value / 100;
         document.querySelector("#popularity-value").textContent = popularityValue;
-    })
+    });
+
+    document.addEventListener("change", () => {
+        let acousticRange = document.querySelector("#acousticness-range");
+        let acousticRangeCheck = document.querySelector("#acousticness-checkbox");
+        let acousticValue = document.querySelector("#acousticness-range");
+        let acousticValueNumber = document.querySelector("#acousticness-value");
+
+        let danceabilityRange = document.querySelector("#danceability-range");
+        let danceabilityRangeCheck = document.querySelector("#danceability-checkbox");
+        let danceabilityValue = document.querySelector("#danceability-range");
+        let danceabilityValueNumber = document.querySelector("#danceability-value");
+
+        let energyRange = document.querySelector("#energy-range");
+        let energyRangeCheck = document.querySelector("#energy-checkbox");
+        let energyValue = document.querySelector("#energy-range");
+        let energyValueNumber = document.querySelector("#energy-value");
+
+        let instrumentalnessRange = document.querySelector("#instrumentalness-range");
+        let instrumentalnessRangeCheck = document.querySelector("#instrumentalness-checkbox");
+        let instrumentalnessValue = document.querySelector("#instrumentalness-range");
+        let instrumentalnessValueNumber = document.querySelector("#instrumentalness-value");
+
+        let popularityRange = document.querySelector("#popularity-range");
+        let popularityRangeCheck = document.querySelector("#popularity-checkbox");
+        let popularityValue = document.querySelector("#popularity-range");
+        let popularityValueNumber = document.querySelector("#popularity-value");
+
+        if (acousticRangeCheck.checked) {
+            acousticRange.disabled = false;
+        }
+        else if (acousticRangeCheck.checked === false) {
+            acousticRange.disabled = true;
+            acousticValue.value = 50;
+            acousticValueNumber.textContent = 0.5;
+        }
+        
+        if (danceabilityRangeCheck.checked) {
+            danceabilityRange.disabled = false;
+        }
+        else if (danceabilityRangeCheck.checked === false) {
+            danceabilityRange.disabled = true;
+            danceabilityValue.value = 50;
+            danceabilityValueNumber.textContent = 0.5;
+        }
+
+        if (energyRangeCheck.checked) {
+            energyRange.disabled = false;
+        }
+        else if (energyRangeCheck.checked === false) {
+            energyRange.disabled = true;
+            energyValue.value = 50;
+            energyValueNumber.textContent = 0.5;
+        }
+
+        if (instrumentalnessRangeCheck.checked) {
+            instrumentalnessRange.disabled = false;
+        }
+        else if (instrumentalnessRangeCheck.checked === false) {
+            instrumentalnessRange.disabled = true;
+            instrumentalnessValue.value = 50;
+            instrumentalnessValueNumber.textContent = 0.5;
+        }
+
+        if (popularityRangeCheck.checked) {
+            popularityRange.disabled = false;
+        }
+        else if (popularityRangeCheck.checked === false) {
+            popularityRange.disabled = true;
+            popularityValue.value = 50;
+            popularityValueNumber.textContent = 0.5;
+        }
+    });
 })
