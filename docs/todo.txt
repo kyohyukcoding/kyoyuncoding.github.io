@@ -1,10 +1,9 @@
 TODO:
 
-1. Add error handling to the API code. Make sure that it gives a warning or error code if the URI is incorrect, or if the formatting is wrong.
 6. Link with Spotify API to create playlist for user based on the recommended songs.
 7. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
-8. Potentially allow to add multiple URLS, optimized for mobile.
-9. Make design responsive for mobile and desktop.
+8. Add buttons next to the range sliders which can disable the range sliders from working.
+9. Add example messages to each of the sliders if they are being hovered over.
 
 DONE:
 
@@ -12,6 +11,8 @@ DONE:
 4. Add a number which changes based on the value of the sliders next to the values.
 9. Maybe remove the number of songs input so that it just creates you a playlist easily rather than having to faff about with how many songs you want on a playlist.
 5. Add the range parameters to the API request.
+10. Make design responsive for mobile and desktop.
+1. Add error handling to the API code. Make sure that it gives a warning or error code if the URI is incorrect, or if the formatting is wrong.
 
 LEARNT:
 
