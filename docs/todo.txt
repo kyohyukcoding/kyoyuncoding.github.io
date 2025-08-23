@@ -4,6 +4,7 @@ TODO:
 6. Link with Spotify API to create playlist for user based on the recommended songs.
 7. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
 8. Potentially allow to add multiple URLS, optimized for mobile.
+9. Make design responsive for mobile and desktop.
 
 DONE:
 
