@@ -1,0 +1,21 @@
+TODO:
+
+1. Add error handling to the API code. Make sure that it gives a warning or error code if the URI is incorrect, or if the formatting is wrong.
+3. Add all the artist names to the artist column in the track recommendations table.
+4. Add a number which changes based on the value of the sliders next to the values.
+5. Add the range parameters to the API request.
+6. Link with Spotify API to create playlist for user based on the recommended songs.
+7. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
+8. Allow to add multiple URLS, optimized for mobile.
+9. Maybe remove the number of songs input so that it just creates you a playlist easily rather than having to faff about with how many songs you want on a playlist.
+
+DONE:
+
+2. Make the table reset each time the request is made.
+
+
+LEARNT:
+
+1. Use 'innerHTML = ""' to clear the child elements of a HTML element.
+2. 
+

@@ -11,8 +11,7 @@
     <body>
         <h2 style="text-align: center; margin-top: 30px; margin-bottom: 20px;">Welcome to the Magic Stereo!</h2>
         <form id="parameters-form"style="margin-top: 30px; height: 25px; text-align: center;">
-            <input id="song-id" style="width: 400px;"type="text" placeholder="Enter the Spotify URI of your favourite track!">
-            <input id="numb-of-songs" style="width: 95px;" type="number" max="100" min="1" placeholder="N. Songs?">
+            <input id="song-id" style="width: 400px;"type="text" placeholder="Enter the Spotify URL of your favourite track!">
             <div style="display: grid; grid-template-columns: 125px 100px; grid-template-rows: 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 20px;">
                 <label style="grid-row-start: 1; grid-column-start: 1; text-align: left" for="acousticness-range">Acoustic? </label>
                 <input style="grid-row-start: 1; grid-column-start: 2;" min="0" max="100" id="acousticness-range" type="range">
@@ -26,22 +25,6 @@
             <input style="margin-top: 30px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Submit">
         </form>
         <table id="song-recommendations" class="table-borders" style="margin: auto; margin-top: 275px; margin-bottom: 30px; visibility: hidden">
-                <tr>
-                    <th style="text-align: center;" colspan="3">
-                        Track Recommendations Table
-                    </th>
-                </tr>
-                <tr>
-                    <th>
-                        Artist(s)
-                    </th>
-                    <th>
-                        Track Name
-                    </th>
-                    <th>
-                        Track Link
-                    </th>
-                </tr>
-            </table>
+        </table>
     </body>
 </html>
