@@ -4,8 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
         table.innerHTML = "";  
         let spotifyURI = document.querySelector("#song-id").value.substring(31, 53);
         document.querySelector("#song-id").value = "";
+
+        let acousticnessValue = document.querySelector("#acousticness-value").textContent;
+        let danceabilityValue = document.querySelector("#danceability-value").textContent;
+        let energyValue = document.querySelector("#energy-value").textContent;
+        let instrumentalnessValue = document.querySelector("#instrumentalness-value").textContent;
+        let popularityValue = document.querySelector("#popularity-value").textContent * 100;
                 
-        fetch(`https://api.reccobeats.com/v1/track/recommendation?size=10&seeds=${spotifyURI}`)
+        fetch(`https://api.reccobeats.com/v1/track/recommendation?size=10&seeds=${spotifyURI}&acousticness=${acousticnessValue}&danceability=${danceabilityValue}&energy=${energyValue}&instrumentalness=${instrumentalnessValue}&popularity=${popularityValue}`)
         .then(response => response.json())
         .then(data => {
 
@@ -30,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             trColumnNames.append(thColumnNameSongLink);
             table.append(trColumnNames);
 
-            // Add all the artists that are on the track as well.
             data["content"].forEach(title => {
 
                 let tr = document.createElement('tr');
@@ -58,4 +63,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         return false;
     }
+
+    document.addEventListener("input", () => {
+        let acousticValue = document.querySelector("#acousticness-range").value / 100;
+        document.querySelector("#acousticness-value").textContent = acousticValue;
+
+        let danceabilityValue = document.querySelector("#danceability-range").value / 100;
+        document.querySelector("#danceability-value").textContent = danceabilityValue;
+
+        let energyValue = document.querySelector("#energy-range").value / 100;
+        document.querySelector("#energy-value").textContent = energyValue;
+
+        let instrumentalnessValue = document.querySelector("#instrumentalness-range").value / 100;
+        document.querySelector("#instrumentalness-value").textContent = instrumentalnessValue;
+
+        let popularityValue = document.querySelector("#popularity-range").value / 100;
+        document.querySelector("#popularity-value").textContent = popularityValue;
+    })
 })

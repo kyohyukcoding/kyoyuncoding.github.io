@@ -12,19 +12,32 @@
         <h2 style="text-align: center; margin-top: 30px; margin-bottom: 20px;">Welcome to the Magic Stereo!</h2>
         <form id="parameters-form"style="margin-top: 30px; height: 25px; text-align: center;">
             <input id="song-id" style="width: 400px;"type="text" placeholder="Enter the Spotify URL of your favourite track!">
-            <div style="display: grid; grid-template-columns: 125px 100px; grid-template-rows: 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 20px;">
+            <div style="display: grid; grid-template-columns: 125px 125px 50px; grid-template-rows: 40px 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 20px;">
+
                 <label style="grid-row-start: 1; grid-column-start: 1; text-align: left" for="acousticness-range">Acoustic? </label>
                 <input style="grid-row-start: 1; grid-column-start: 2;" min="0" max="100" id="acousticness-range" type="range">
+                <text id="acousticness-value">0.5</text>
+
                 <label style="grid-row-start: 2; grid-column-start: 1; text-align: left" for="danceability-range">Danceable? </label>
                 <input style="grid-row-start: 2; grid-column-start: 2;" min="0" max="100" id="danceability-range" type="range">
+                <text id="danceability-value">0.5</text>
+
                 <label style="grid-row-start: 3; grid-column-start: 1; text-align: left" for="energy-range">Energetic? </label>
                 <input style="grid-row-start: 3; grid-column-start: 2;" min="0" max="100" id="energy-range" type="range">
+                <text id="energy-value">0.5</text>
+
                 <label style="grid-row-start: 4; grid-column-start: 1; text-align: left" for="instrumentalness-range">Instrumental? </label>
                 <input style="grid-row-start: 4; grid-column-start: 2;" min="0" max="100"id="instrumentalness-range" type="range">
+                <text id="instrumentalness-value">0.5</text>
+
+                <label style="grid-row-start: 5; grid-column-start: 1; text-align: left" for="popularity-range">Popularity? </label>
+                <input style="grid-row-start: 5; grid-column-start: 2;" min="0" max="100"id="popularity-range" type="range">
+                <text id="popularity-value">0.5</text>
+
             </div>
             <input style="margin-top: 30px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Submit">
         </form>
-        <table id="song-recommendations" class="table-borders" style="margin: auto; margin-top: 275px; margin-bottom: 30px; visibility: hidden">
+        <table id="song-recommendations" class="table-borders" style="margin: auto; margin-top: 315px; margin-bottom: 30px; visibility: hidden">
         </table>
     </body>
 </html>
