@@ -1,8 +1,9 @@
 TODO:
-6. Link with Spotify iframe API to create playlist for user based on the recommended songs.
 7. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
 9. Add example messages to each of the sliders if they are being hovered over.
 10. Make it so that the seed track and the parameters are shown in the table as well.
+11. Add a "copy to clipboard" button as well.
+12. Add all artist names to the table as well.
 
 DONE:
 2. Make the table reset each time the request is made.

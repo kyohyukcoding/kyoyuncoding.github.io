@@ -70,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     table.appendChild(tr);
                 });
+                
+                // document.querySelector("#seed-track-text").textContent = `From your seed track of ${getTrackDetail(spotifyURI)}, here are your song recommendations!`
                 document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
             }
@@ -209,4 +211,14 @@ function resetAll() {
 
 function closeModal() {
     document.querySelector("dialog").close();
+}
+
+function getTrackDetail(spotifyURI) {
+    fetch(`https://api.reccobeats.com/v1/track?ids=${spotifyURI}`)
+    .then(response => response.json())
+    .then(data => {
+        let trackTitle = data["content"][0]["trackTitle"];
+        console.log(`${trackTitle} <- here is the track name.` )
+        return trackTitle;
+    });
 }
