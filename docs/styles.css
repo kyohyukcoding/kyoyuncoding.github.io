@@ -1,3 +1,170 @@
+@media(max-width: 600px) 
+{
+    .media-test
+    {
+        display: block; 
+        margin: 15px auto;
+        width: 80%;
+        height: 80%;
+    }
+
+    .index-subheading
+    {
+        font-size: 18.72px;
+    }
+    
+    .embed-video
+    {
+        text-align: center;
+        width: 250px; 
+        height: 141px;
+    }
+
+    .parameters-container-mobile
+    {
+        display: grid; 
+        grid-template-columns: 50px 110px 125px 50px;
+        grid-template-rows: 40px 40px 40px 40px 40px;
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 25px;
+    }
+
+    .spotify-url-input-phone-size
+    {
+        width: 290px;
+    }
+
+    .mobile-header-format
+    {
+        text-align: center;
+        margin-top: 8%;
+        margin-right: 20%;
+        margin-left: 20%;
+    }
+
+    .parameters-form-mobile
+    { 
+        height: 25px; 
+        text-align: center;
+    }
+
+    .error-message-mobile
+    {
+        text-align: center; 
+        color: red; 
+        margin-top: 15px; 
+        margin-bottom: 20px;
+    }
+}
+
+
+@media(min-width: 600px)
+{
+
+    .index-title
+    {
+        font-size: 50px;
+    }
+
+    .embed-video
+    {
+        text-align: center;
+        width: 560px; 
+        height: 315px;
+    }
+
+    .spotify-url-input-desktop-size
+    {
+        width: 550px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .parameters-form-desktop
+    { 
+        height: 25px; 
+        text-align: center;
+    }
+
+    .parameters-container-desktop
+    {
+        display: grid; 
+        grid-template-columns: 40px 140px 250px 35px;  
+        grid-template-rows: 65px 65px 65px 65px 65px; 
+        justify-content: center; 
+        align-items: center; 
+        margin-top: 30px;
+    }
+
+    .parameter-label
+    {
+        text-align: left;  
+        font-size: 20px;
+    }
+    
+    .dialog-recommendations
+    {
+        margin: auto; 
+        padding: 30px;
+    }
+
+    .magic-stereo-header
+    {
+        text-align: center;
+        margin-top: 4.5%;
+        margin-right: 20%;
+        margin-left: 20%;
+        font-size: 40px;
+    }
+
+    .checkbox
+    {
+        height: 20px;
+        width: 20px;
+    }
+
+    .magic-stereo-text
+    {
+        font-size: 20px;
+    }
+
+    #close-dialog
+    {
+        font-size: 20px;
+    }
+
+    #copy-to-clipboard
+    {
+        font-size: 20px;
+    }
+
+    #form-submit
+    {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .range-value
+    {
+        font-size: 20px;
+    }
+
+    .range
+    {
+        width: 225px;
+    }
+
+    .error-message-desktop
+    {
+        text-align: center; 
+        color: red; 
+        margin-top: 30px; 
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
 .button
 {
     background-color: white;
@@ -55,33 +222,6 @@
     height: 500px;
 }
 
-@media(max-width: 600px) 
-{
-    .media-test
-    {
-        display: block; 
-        margin: 15px auto;
-        width: 80%;
-        height: 80%;
-    }
-}
-
-@media(min-width: 600px) 
-{
-    .index-title
-    {
-        font-size: 50px;
-    }
-}
-
-@media(max-width: 600px) 
-{
-    .index-subheading
-    {
-        font-size: 18.72px;
-    }
-}
-
 .flex-text
 {
     display: flex;
@@ -90,32 +230,13 @@
     align-items: center;
 }
 
-@media(min-width: 600px)
-{
-    .embed-video
-    {
-        text-align: center;
-        width: 560px; 
-        height: 315px;
-    }
-}
-
-@media(max-width: 600px)
-{
-    .embed-video
-    {
-        text-align: center;
-        width: 250px; 
-        height: 141px;
-    }
-}
-
 table, tr, th, td
 {
     padding: 5px;
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
+    font-size: 20px;
 }
 
 a
@@ -123,42 +244,21 @@ a
     text-decoration: none;
 }
 
-@media(max-width: 600px) 
+.dialog
 {
-    .spotify-url-input-phone-size
-    {
-        width: 335px;
-    }
+    border-color: rgb(179, 179, 179);
 }
 
-@media(min-width: 600px) 
+.buttons-container
 {
-    .spotify-url-input-desktop-size
-    {
-        width: 400px;
-    }
-}
-
-.parameters-form 
-{ 
-    margin-top: 35px; 
-    height: 25px; 
-    text-align: center;
-}
-
-.parameters-container
-{
-    display: grid; 
-    grid-template-columns: 50px 110px 125px 50px; 
-    grid-template-rows: 40px 40px 40px 40px 40px; 
+    display: flex; 
     justify-content: center; 
     align-items: center; 
-    margin-top: 30px;
 }
 
-.parameter-label
+.button-left-margin
 {
- text-align: left;  
+    margin-left: 15px;
 }
 
 .row-one 
@@ -209,35 +309,4 @@ a
 .column-five
 {
     grid-column-start: 5
-}
-
-.error-message
-{
-    text-align: center; 
-    color: red; 
-    margin-top: 20px; 
-    margin-bottom: 20px;
-}
-
-.dialog
-{
-    border-color: rgb(179, 179, 179);
-}
-
-.buttons-container
-{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.button-left-margin
-{
-    margin-left: 15px;
-}
-
-.dialog-recommendations
-{
-    margin: auto; 
-    padding: 30px;
 }
