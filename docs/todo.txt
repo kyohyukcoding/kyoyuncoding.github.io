@@ -3,7 +3,6 @@ TODO:
 9. Add example messages to each of the sliders if they are being hovered over.
 10. Make it so that the seed track and the parameters are shown in the table as well.
 11. Add a "copy to clipboard" button as well.
-12. Add all artist names to the table as well.
 
 DONE:
 2. Make the table reset each time the request is made.
@@ -14,6 +13,7 @@ DONE:
 1. Add error handling to the API code. Make sure that it gives a warning or error code if the URI is incorrect, or if the formatting is wrong.
 8. Add buttons next to the range sliders which can disable the range sliders from working.
 10. Make it so that when I disable a parameter, it doesn't include it from the query.
+12. Add all artist names to the table as well.
 
 LEARNT:
 1. Use 'innerHTML = ""' to clear the child elements of a HTML element.
@@ -25,3 +25,4 @@ LEARNT:
 7. Use the 'disabled' attribute to disable an input element.
 8. Use a lookup object instead of ternary operators to assign variable names.
 9. Flex and Grid only work on container elements, rather than single inline elements.
+10. Use the ".join()" method to join elements of an array based on a delimiter.

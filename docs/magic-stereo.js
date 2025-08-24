@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let instrumentalnessValue = document.querySelector("#instrumentalness-value").textContent;
         let popularityValue = document.querySelector("#popularity-value").textContent * 100;
         resetAll();
-         
         fetch(assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energyValue, instrumentalnessValue, popularityValue))
         .then(response => response.json())
         .then(data => {
@@ -42,41 +41,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 let counter = 0;
 
                 data["content"].forEach(title => {
-
                     counter++;
-
                     let tr = document.createElement('tr');
-
                     let tdCounter = document.createElement('td');
                     tdCounter.textContent = `${counter}.`;
-
                     let tdArtist = document.createElement('td');
-                    tdArtist.textContent = title["artists"][0]["name"];
-
+                    let artistNames = [];
+                    
+                    // Get the names of all of the artists who are on the track.
+                    title["artists"].forEach(artistName => {
+                        artistNames.push(artistName["name"]);
+                    })
+                    tdArtist.textContent = artistNames.join(", ");
                     let tdTrackTitle = document.createElement('td');
                     tdTrackTitle.textContent = title["trackTitle"];
-                    
                     let tdSongLink = document.createElement('td');
                     let songLink = document.createElement('a');
-
                     songLink.href = title["href"];
                     songLink.textContent = "Link";
                     tdSongLink.appendChild(songLink);
-
                     tr.appendChild(tdCounter);
                     tr.appendChild(tdArtist);
                     tr.appendChild(tdTrackTitle);
                     tr.appendChild(tdSongLink);
-
                     table.appendChild(tr);
                 });
                 
                 // document.querySelector("#seed-track-text").textContent = `From your seed track of ${getTrackDetail(spotifyURI)}, here are your song recommendations!`
                 document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
-            }
-            else
-            {
+            } else {
                 document.querySelector("#error-messages").textContent = "Invalid Spotify URL."
             }
         })
@@ -87,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener("input", () => {
-        let acousticValue = document.querySelector("#acousticness-range").value / 100;
-        document.querySelector("#acousticness-value").textContent = acousticValue;
+        let parametersRange = document.querySelector("#acousticness-range").value / 100;
+        document.querySelector("#acousticness-value").textContent = parametersRange;
 
         let danceabilityValue = document.querySelector("#danceability-range").value / 100;
         document.querySelector("#danceability-value").textContent = danceabilityValue;
@@ -104,74 +98,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("change", () => {
-        let acousticRange = document.querySelector("#acousticness-range");
-        let acousticRangeCheck = document.querySelector("#acousticness-checkbox");
-        let acousticValue = document.querySelector("#acousticness-range");
-        let acousticValueNumber = document.querySelector("#acousticness-value");
+        let parametersRange = document.getElementsByClassName("range");
+        let parametersRangeCheck = document.getElementsByClassName("checkbox");
+        let parametersValueNumber = document.getElementsByClassName("range-value");
 
-        let danceabilityRange = document.querySelector("#danceability-range");
-        let danceabilityRangeCheck = document.querySelector("#danceability-checkbox");
-        let danceabilityValue = document.querySelector("#danceability-range");
-        let danceabilityValueNumber = document.querySelector("#danceability-value");
-
-        let energyRange = document.querySelector("#energy-range");
-        let energyRangeCheck = document.querySelector("#energy-checkbox");
-        let energyValue = document.querySelector("#energy-range");
-        let energyValueNumber = document.querySelector("#energy-value");
-
-        let instrumentalnessRange = document.querySelector("#instrumentalness-range");
-        let instrumentalnessRangeCheck = document.querySelector("#instrumentalness-checkbox");
-        let instrumentalnessValue = document.querySelector("#instrumentalness-range");
-        let instrumentalnessValueNumber = document.querySelector("#instrumentalness-value");
-
-        let popularityRange = document.querySelector("#popularity-range");
-        let popularityRangeCheck = document.querySelector("#popularity-checkbox");
-        let popularityValue = document.querySelector("#popularity-range");
-        let popularityValueNumber = document.querySelector("#popularity-value");
-
-        if (acousticRangeCheck.checked) {
-            acousticRange.disabled = false;
-        }
-        else if (acousticRangeCheck.checked === false) {
-            acousticRange.disabled = true;
-            acousticValue.value = 50;
-            acousticValueNumber.textContent = 0.5;
-        }
-        
-        if (danceabilityRangeCheck.checked) {
-            danceabilityRange.disabled = false;
-        }
-        else if (danceabilityRangeCheck.checked === false) {
-            danceabilityRange.disabled = true;
-            danceabilityValue.value = 50;
-            danceabilityValueNumber.textContent = 0.5;
-        }
-
-        if (energyRangeCheck.checked) {
-            energyRange.disabled = false;
-        }
-        else if (energyRangeCheck.checked === false) {
-            energyRange.disabled = true;
-            energyValue.value = 50;
-            energyValueNumber.textContent = 0.5;
-        }
-
-        if (instrumentalnessRangeCheck.checked) {
-            instrumentalnessRange.disabled = false;
-        }
-        else if (instrumentalnessRangeCheck.checked === false) {
-            instrumentalnessRange.disabled = true;
-            instrumentalnessValue.value = 50;
-            instrumentalnessValueNumber.textContent = 0.5;
-        }
-
-        if (popularityRangeCheck.checked) {
-            popularityRange.disabled = false;
-        }
-        else if (popularityRangeCheck.checked === false) {
-            popularityRange.disabled = true;
-            popularityValue.value = 50;
-            popularityValueNumber.textContent = 0.5;
+        for (let i = 0; i < parametersRange.length; i++) {
+            if(parametersRangeCheck[i].checked) {
+                parametersRange[i].disabled = false;
+            } else if(parametersRangeCheck[i].checked === false) {
+                parametersRange[i].disabled = true;
+                parametersRange[i].value = 50;
+                parametersValueNumber[i].textContent = 0.5;
+            }
         }
     });
 });
