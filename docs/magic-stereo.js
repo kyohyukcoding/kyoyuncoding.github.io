@@ -2,13 +2,13 @@
 document.addEventListener("DOMContentLoaded", () => { 
     document.querySelector("#parameters-form").onsubmit = () => {
         let table = document.querySelector("#song-recommendations");
-        table.innerHTML = "";  
         let spotifyURI = document.querySelector("#song-id").value.substring(31, 53);
         let acousticnessValue = document.querySelector("#acousticness-value").textContent;
         let danceabilityValue = document.querySelector("#danceability-value").textContent;
         let energyValue = document.querySelector("#energy-value").textContent;
         let instrumentalnessValue = document.querySelector("#instrumentalness-value").textContent;
         let popularityValue = document.querySelector("#popularity-value").textContent * 100;
+        table.innerHTML = "";  
         resetAll();
         fetch(assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energyValue, instrumentalnessValue, popularityValue))
         .then(response => response.json())
@@ -116,7 +116,7 @@ function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energ
         "instrumentalness" : instrumentalnessValue,
         "popularity" : popularityValue,
     }
-    let reccoBeatsCall = `https://api.reccobeats.com/v1/track/recommendation?size=10&seeds=${spotifyURI}`;
+    let reccoBeatsCall = `https://api.reccobeats.com/v1/track/recommendation?size=15&seeds=${spotifyURI}`;
     for(let i = 0; i < checkBoxes.length; i++) {
         if(checkBoxes[i].checked) {
             let parameterName = checkBoxes[i].id.split("-")[0]
