@@ -1,7 +1,8 @@
 .button
 {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-top: 25px;
 }
 
 .center_margin
@@ -138,3 +139,105 @@ a
     }
 }
 
+.parameters-form 
+{ 
+    margin-top: 35px; 
+    height: 25px; 
+    text-align: center;
+}
+
+.parameters-container
+{
+    display: grid; 
+    grid-template-columns: 50px 110px 125px 50px; 
+    grid-template-rows: 40px 40px 40px 40px 40px; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 30px;
+}
+
+.parameter-label
+{
+ text-align: left;  
+}
+
+.row-one 
+{
+    grid-row-start: 1;
+}
+
+.row-two 
+{
+    grid-row-start: 2;
+}
+
+.row-three 
+{
+    grid-row-start: 3;
+}
+
+.row-four 
+{
+    grid-row-start: 4;
+}
+
+.row-five 
+{
+    grid-row-start: 5;
+}
+
+.column-one
+{
+    grid-column-start: 1
+}
+
+.column-two
+{
+    grid-column-start: 2
+}
+
+.column-three
+{
+    grid-column-start: 3
+}
+
+.column-four
+{
+    grid-column-start: 4
+}
+
+.column-five
+{
+    grid-column-start: 5
+}
+
+.error-message
+{
+    text-align: center; 
+    color: red; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+
+.dialog
+{
+    border-color: rgb(179, 179, 179);
+}
+
+.buttons-container
+{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.button-left-margin
+{
+    margin-left: 15px;
+}
+
+.dialog-recommendations
+{
+    margin: auto; 
+    padding: 30px;
+}

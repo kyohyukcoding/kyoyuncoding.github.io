@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     tr.appendChild(tdSongLink);
                     table.appendChild(tr);
                 });
-                
                 // document.querySelector("#seed-track-text").textContent = `From your seed track of ${getTrackDetail(spotifyURI)}, here are your song recommendations!`
                 document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
@@ -81,27 +80,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener("input", () => {
-        let parametersRange = document.querySelector("#acousticness-range").value / 100;
-        document.querySelector("#acousticness-value").textContent = parametersRange;
-
-        let danceabilityValue = document.querySelector("#danceability-range").value / 100;
-        document.querySelector("#danceability-value").textContent = danceabilityValue;
-
-        let energyValue = document.querySelector("#energy-range").value / 100;
-        document.querySelector("#energy-value").textContent = energyValue;
-
-        let instrumentalnessValue = document.querySelector("#instrumentalness-range").value / 100;
-        document.querySelector("#instrumentalness-value").textContent = instrumentalnessValue;
-
-        let popularityValue = document.querySelector("#popularity-range").value / 100;
-        document.querySelector("#popularity-value").textContent = popularityValue;
+        let parametersRange = document.querySelectorAll(".range");
+        let parametersTextContent = document.querySelectorAll(".range-value");
+        for (let i = 0; i < parametersRange.length; i++) {
+            parametersTextContent[i].textContent = parametersRange[i].value / 100;
+        }
     });
 
     document.addEventListener("change", () => {
-        let parametersRange = document.getElementsByClassName("range");
-        let parametersRangeCheck = document.getElementsByClassName("checkbox");
-        let parametersValueNumber = document.getElementsByClassName("range-value");
-
+        let parametersRange = document.querySelectorAll(".range");
+        let parametersRangeCheck = document.querySelectorAll(".checkbox");
+        let parametersValueNumber = document.querySelectorAll(".range-value");
         for (let i = 0; i < parametersRange.length; i++) {
             if(parametersRangeCheck[i].checked) {
                 parametersRange[i].disabled = false;
@@ -115,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energyValue, instrumentalnessValue, popularityValue) {
-    let checkBoxes = document.getElementsByClassName("checkbox");
+    let checkBoxes = document.querySelectorAll(".checkbox");
     let variableLookupObj = {
         "acousticness": acousticnessValue,
         "danceability" : danceabilityValue,
@@ -135,10 +124,9 @@ function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energ
 
 function resetAll() {
     document.querySelector("#song-id").value = "";
-    let checkBoxes = document.getElementsByClassName("checkbox");
-    let range = document.getElementsByClassName("range");
-    let rangeValue = document.getElementsByClassName("range-value");
-
+    let checkBoxes = document.querySelectorAll(".checkbox");
+    let range = document.querySelectorAll(".range");
+    let rangeValue = document.querySelectorAll(".range-value");
     for (let i = 0; i < checkBoxes.length; i++) {
         checkBoxes[i].checked = false;
         range[i].disabled = true;

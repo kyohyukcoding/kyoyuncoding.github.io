@@ -10,53 +10,52 @@
         <script src="magic-stereo.js"></script>
     </head>
     <body>
-        <ul class="nav justify-content-center" style = "margin-top: 10px">
+        <ul class="nav justify-content-center" style="margin-top: 10px">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="index.html">
                     Home
                 </a>
             </li>
         </ul>
-        <h2 style="text-align: center; margin-top: 5%; margin-bottom: 30px;">Welcome to the Magic Stereo!</h2>
-        <form id="parameters-form"style="margin-top: 35px; height: 25px; text-align: center;">
-            <input class="spotify-url-input-phone-size spotify-url-input-desktop-size" id="song-id" type="text" placeholder="Enter the Spotify URL of your favourite track!">
-            <div style="display: grid; grid-template-columns: 50px 110px 125px 50px; grid-template-rows: 40px 40px 40px 40px 40px; justify-content: center; align-items: center; margin-top: 30px;">
-                <input style="grid-row-start: 1; grid-column-start: 1;" id="acousticness-checkbox" class="checkbox" type="checkbox">
-                <label style="grid-row-start: 1; grid-column-start: 2; text-align: left" for="acousticness-range">Acoustic? </label>
-                <input style="grid-row-start: 1; grid-column-start: 3;" min="0" max="100" id="acousticness-range" class="range" type="range" disabled>
-                <text class="range-value" style="grid-row-start: 1; grid-column-start: 4;" id="acousticness-value">0.5</text>
+        <h2 class="header_format">Welcome to the Magic Stereo!</h2>
+        <form id="parameters-form" class="parameters-form">
+            <input id="song-id" class="spotify-url-input-phone-size spotify-url-input-desktop-size" type="text" placeholder="Enter the Spotify URL of your favourite track!">
+            <div class="parameters-container">
+                <input id="acousticness-checkbox" class="checkbox row-one column-one" type="checkbox">
+                <label id="acousticness-label" class="row-one column-two parameter-label" for="acousticness-range">Acoustic? </label>
+                <input id="acousticness-range" class="range row-one column-three" min="0" max="100" type="range" disabled>
+                <text id="acousticness-value" class="range-value row-one column-four">0.5</text>
 
-                <input style="grid-row-start: 2; grid-column-start: 1;" id="danceability-checkbox" class="checkbox" type="checkbox">
-                <label style="grid-row-start: 2; grid-column-start: 2; text-align: left" for="danceability-range">Danceable?</label>
-                <input style="grid-row-start: 2; grid-column-start: 3;" min="0" max="100" id="danceability-range" class="range" type="range" disabled>
-                <text class="range-value" style="grid-row-start: 2; grid-column-start: 4;" id="danceability-value">0.5</text>
+                <input id="danceability-checkbox" class="checkbox row-two column-one" type="checkbox">
+                <label id="danceability-label" class="parameter-label row-two column-two" for="danceability-range">Danceable?</label>
+                <input id="danceability-range" class="range row-two column-three" min="0" max="100" type="range" disabled>
+                <text id="danceability-value" class="range-value row-two column-four" >0.5</text>
 
-                <input style="grid-row-start: 3; grid-column-start: 1;" id="energy-checkbox" class="checkbox" type="checkbox">
-                <label style="grid-row-start: 3; grid-column-start: 2; text-align: left" for="energy-range">Energetic? </label>
-                <input style="grid-row-start: 3; grid-column-start: 3;" min="0" max="100" id="energy-range" class="range" type="range" disabled>
-                <text class="range-value" style="grid-row-start: 3; grid-column-start: 4;" id="energy-value">0.5</text>
+                <input id="energy-checkbox" class="checkbox row-three column-one" type="checkbox">
+                <label id="energy-label" class="parameter-label row-three column-two" for="energy-range">Energetic? </label>
+                <input id="energy-range" class="range row-three column-three" min="0" max="100" type="range" disabled>
+                <text id="energy-value" class="range-value row-three column-four" >0.5</text>
 
-                <input style="grid-row-start: 4; grid-column-start: 1;" id="instrumentalness-checkbox" class="checkbox" type="checkbox">
-                <label style="grid-row-start: 4; grid-column-start: 2; text-align: left" for="instrumentalness-range">Instrumental? </label>
-                <input style="grid-row-start: 4; grid-column-start: 3;" min="0" max="100"id="instrumentalness-range" class="range" type="range" disabled>
-                <text class="range-value" style="grid-row-start: 4; grid-column-start: 4;" id="instrumentalness-value">0.5</text>
+                <input id="instrumentalness-checkbox" class="checkbox row-four column-one" type="checkbox">
+                <label id="energy-label" class="parameter-label row-four column-two" for="instrumentalness-range">Instrumental? </label>
+                <input id="instrumentalness-range" class="range row-four column-three" min="0" max="100"  type="range" disabled>
+                <text id="instrumentalness-value" class="range-value row-four column-four" >0.5</text>
                 
-                <input style="grid-row-start: 5; grid-column-start: 1;" id="popularity-checkbox" class="checkbox" type="checkbox">
-                <label style="grid-row-start: 5; grid-column-start: 2; text-align: left" for="popularity-range">Popularity? </label>
-                <input style="grid-row-start: 5; grid-column-start: 3;" min="0" max="100"id="popularity-range" class="range" type="range" disabled>
-                <text class="range-value" style="grid-row-start: 5; grid-column-start: 4;" id="popularity-value">0.5</text>
+                <input id="popularity-checkbox" class="checkbox row-five column-one" type="checkbox">
+                <label id="energy-label" class="parameter-label row-five column-two" for="popularity-range">Popularity? </label>
+                <input id="popularity-range" class="range row-five column-three" min="0" max="100" type="range" disabled>
+                <text id="popularity-value" class="range-value row-five column-four">0.5</text>
             </div>
-            <input class="button" style="margin-top: 25px; background-color: white; border-radius: 5px;"id="form-submit" type="submit" value="Make Playlist!">
-            <p style="text-align: center; color: red; margin-top: 20px; margin-bottom: 20px;" id="error-messages"></p>
+            <input class="button" id="form-submit" type="submit" value="Make Playlist!">
+            <p class="error-message" id="error-messages"></p>
         </form>
-        <dialog style="border-color: rgb(179, 179, 179);">
-            <!-- <p id="seed-track-text">
-            </p> -->
-            <table id="song-recommendations" class="table-borders" style="margin: auto; padding: 30px;">
+        <dialog class="dialog">
+            <!-- <p id="seed-track-text"></p> -->
+            <table id="song-recommendations"class="dialog-recommendations">
             </table>  
-            <div style="display: flex; justify-content: center; align-items: center; margin-top: 15px;">
+            <div class="buttons-container">
                 <input class="button" type="submit" onclick="closeModal()" value="Close">   
-                <input style="margin-left: 15px;" class="button" type="submit" onclick="copyToClipboard()" value="Copy to Clipboard!">          
+                <input class="button button-left-margin" type="submit" onclick="copyToClipboard()" value="Copy to Clipboard!">          
             </div>
         </dialog>
     </body>
