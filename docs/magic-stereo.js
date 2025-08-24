@@ -140,11 +140,6 @@ function resetAll() {
     }
 }
 
-// This function closes the modal dialog.
-function closeModal() {
-    document.querySelector("dialog").close();
-}
-
 // This function gets the track title based off of the entered Spotify URL.
 function getTrackDetail(spotifyURI) {
     fetch(`https://api.reccobeats.com/v1/track?ids=${spotifyURI}`)
@@ -154,4 +149,8 @@ function getTrackDetail(spotifyURI) {
         console.log(`${trackTitle} <- here is the track name.` )
         return trackTitle;
     });
+}
+
+function closeModal() {
+    document.querySelector("dialog").close();
 }
