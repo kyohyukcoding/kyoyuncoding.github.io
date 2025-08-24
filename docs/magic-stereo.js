@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Makes the main API call, and uses the returned json to create the table of song recommendations in the pop-up dialog.
+document.addEventListener("DOMContentLoaded", () => { 
     document.querySelector("#parameters-form").onsubmit = () => {
         let table = document.querySelector("#song-recommendations");
         table.innerHTML = "";  
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 let counter = 0;
 
+                // Loops through each index of the data["content"] array, creating the table of music recommendations that pops up in the dialog.
                 data["content"].forEach(title => {
                     counter++;
                     let tr = document.createElement('tr');
@@ -49,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     let artistNames = [];
                     
                     // Get the names of all of the artists who are on the track.
-                    title["artists"].forEach(artistName => {
+                    title["artists"].forEach(artistName => { 
                         artistNames.push(artistName["name"]);
                     })
                     tdArtist.textContent = artistNames.join(", ");
@@ -66,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     tr.appendChild(tdSongLink);
                     table.appendChild(tr);
                 });
-                // document.querySelector("#seed-track-text").textContent = `From your seed track of ${getTrackDetail(spotifyURI)}, here are your song recommendations!`
                 document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
             } else {
@@ -79,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return false;
     }
 
+    // This event listener updates the relevant range value whenever it's corresponding slider is altered.
     document.addEventListener("input", () => {
         let parametersRange = document.querySelectorAll(".range");
         let parametersTextContent = document.querySelectorAll(".range-value");
@@ -87,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Whenever a checkbox is ticked, the slider is enabled, when a checkbox is unticked, the slider is disabled and the value is reset to the middle.
     document.addEventListener("change", () => {
         let parametersRange = document.querySelectorAll(".range");
         let parametersRangeCheck = document.querySelectorAll(".checkbox");
@@ -103,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// This function assembles the correct URL endpoint. If a parameter is ticked, its value is used in the URL.
 function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energyValue, instrumentalnessValue, popularityValue) {
     let checkBoxes = document.querySelectorAll(".checkbox");
     let variableLookupObj = {
@@ -122,6 +126,7 @@ function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energ
     return reccoBeatsCall;
 };
 
+// This function resets all input and text values, and disables all sliders.
 function resetAll() {
     document.querySelector("#song-id").value = "";
     let checkBoxes = document.querySelectorAll(".checkbox");
@@ -135,10 +140,12 @@ function resetAll() {
     }
 }
 
+// This function closes the modal dialog.
 function closeModal() {
     document.querySelector("dialog").close();
 }
 
+// This function gets the track title based off of the entered Spotify URL.
 function getTrackDetail(spotifyURI) {
     fetch(`https://api.reccobeats.com/v1/track?ids=${spotifyURI}`)
     .then(response => response.json())

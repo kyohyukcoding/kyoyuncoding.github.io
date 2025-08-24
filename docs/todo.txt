@@ -14,6 +14,7 @@ DONE:
 8. Make it so that when I disable a parameter, it doesn't include it from the query.
 9. Add all artist names to the table as well.
 10. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
+11. Commenting JS code.
 
 LEARNT:
 1. Use 'innerHTML = ""' to clear the child elements of a HTML element.
