@@ -1,8 +1,9 @@
 TODO:
-9. Add example messages to each of the sliders if they are being hovered over.
-10. Make it so that the seed track and the parameters are shown in the table as well.
-11. Make "copy to clipboard" button functional as well.
-12. Make it so that the buttons and stuff all work in safari as well.
+1. Add example messages to each of the sliders if they are being hovered over.
+2. Make it so that the seed track and the parameters are shown in the table as well.
+3. Make "copy to clipboard" button functional as well.
+4. Make it so that the buttons and stuff all work in safari as well.
+5. Refactor CSS file!
 
 DONE:
 1. Make the table reset each time the request is made.
