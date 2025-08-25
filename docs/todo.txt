@@ -1,7 +1,8 @@
 TODO:
 9. Add example messages to each of the sliders if they are being hovered over.
 10. Make it so that the seed track and the parameters are shown in the table as well.
-11. Add a "copy to clipboard" button as well.
+11. Make "copy to clipboard" button functional as well.
+12. Make it so that the buttons and stuff all work in safari as well.
 
 DONE:
 1. Make the table reset each time the request is made.
@@ -15,6 +16,7 @@ DONE:
 9. Add all artist names to the table as well.
 10. Refactor everything nicely into separate CSS and JS files. Perhaps refactor code into modular functions, focus on DRY principles.
 11. Commenting JS code.
+12. Make little pods for each coding project.
 
 LEARNT:
 1. Use 'innerHTML = ""' to clear the child elements of a HTML element.
@@ -27,3 +29,6 @@ LEARNT:
 8. Use a lookup object instead of ternary operators to assign variable names.
 9. Flex and Grid only work on container elements, rather than single inline elements.
 10. Use the ".join()" method to join elements of an array based on a delimiter.
+11. You can target the children of elements with CSS by putting their name after the first element. For example, like .project-pod .project-image {background-color: blue;}. This will turn the project image class element blue if it is within a project-pod element.
+12. Use the transform property to change the position of things by Y or X axis.
+13. To get everything in the grid to stack on mobile view, just set the number of columns to 1, so everything is stacked vertically.

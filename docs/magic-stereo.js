@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
         .catch(error => {
+            document.querySelector("#error-messages").textContent = "Invalid Spotify URL.";
             console.log("Error", error);
         });
         return false;

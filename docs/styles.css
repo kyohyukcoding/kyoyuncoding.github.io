@@ -1,6 +1,6 @@
 @media(max-width: 600px) 
 {
-    .media-test
+    .media-mobile
     {
         display: block; 
         margin: 15px auto;
@@ -16,8 +16,8 @@
     .embed-video
     {
         text-align: center;
-        width: 250px; 
-        height: 141px;
+        height: 144px;
+        width: 260px; 
     }
 
     .parameters-container-mobile
@@ -56,11 +56,87 @@
         margin-top: 15px; 
         margin-bottom: 20px;
     }
+
+    .center-margin-mobile
+    {
+        padding: 20px 0 10px;
+        text-align: center;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+
+    .project-container
+    {
+        margin: 3.5% auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .project-pod
+    {
+        margin: auto;
+        height: 551px;
+        width: 310px;
+        border: 1px solid rgb(179, 179, 179);
+        border-radius: 15px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .center_margin
+    {
+        padding: 20px 0;
+        text-align: center;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+
+    .project-image
+    {
+        margin: auto;
+        border: 1px solid rgb(179, 179, 179);
+        height: 144px;
+        width: 256px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pod-description
+    {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-image-align
+    {
+        width: 250px; 
+        transform: translateY(-15px);
+        transform: translateX(-0px);
+    }
+
+    .margin-mobile
+    {
+        padding: 20px 0;
+        text-align: center;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
 }
 
 
 @media(min-width: 600px)
 {
+
+    .media-normal
+    {
+        display: block; 
+        margin: 15px auto;
+        width: 500px;
+        height: 500px;
+    }
 
     .index-title
     {
@@ -70,8 +146,8 @@
     .embed-video
     {
         text-align: center;
-        width: 560px; 
-        height: 315px;
+        width: 330px; 
+        height: 185.6px;
     }
 
     .spotify-url-input-desktop-size
@@ -85,6 +161,13 @@
     { 
         height: 25px; 
         text-align: center;
+    }
+
+    .parameters-form-desktop:hover
+    { 
+        height: 25px; 
+        text-align: center;
+        border-color: black
     }
 
     .parameters-container-desktop
@@ -168,6 +251,67 @@
     {
         font-size: 20px;
     }
+
+    .center_margin
+    {
+        padding: 20px 0;
+        text-align: center;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+
+    .project-container
+    {
+        margin: 3.5% auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    #thinkdev-project
+    {
+        grid-column-start: 2;
+    }
+
+    #magic-stereo-project
+    {
+        grid-column-start: 3;
+    }
+
+    .project-pod
+    {
+        margin: auto;
+        height: 500px;
+        width: 400px;
+        border: 1px solid rgb(179, 179, 179);
+        border-radius: 15px;
+    }
+
+    .project-image
+    {
+        margin: auto;
+        border: 1px solid rgb(179, 179, 179);
+        height: 185px;
+        width: 330px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .pod-description
+    {
+        height: 150px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-image-align
+    {
+        width: 330px; 
+        transform: translateY(-3px);
+    }
 }
 
 .button
@@ -175,14 +319,17 @@
     background-color: white;
     border-radius: 5px;
     margin-top: 25px;
+    border-color: rgb(179, 179, 179);
+    border-style: solid;
 }
 
-.center_margin
+.button:hover
 {
-    padding: 20px 0;
-    text-align: center;
-    margin-right: 15%;
-    margin-left: 15%;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 25px;
+    border-color:black;
+    border-style: solid; 
 }
 
 .caption_text
@@ -219,14 +366,6 @@
     color: black;
 }
 
-.media-normal
-{
-    display: block; 
-    margin: 15px auto;
-    width: 500px;
-    height: 500px;
-}
-
 .flex-text
 {
     display: flex;
@@ -246,6 +385,12 @@ table, tr, th, td
 a
 {
     text-decoration: none;
+}
+
+.clickable-card
+{
+    text-decoration: none;
+    color: inherit;
 }
 
 .dialog
@@ -314,3 +459,34 @@ a
 {
     grid-column-start: 5
 }
+
+.project-pod:hover
+{
+    border: 1px solid black;
+}
+
+.project-pod:hover .project-image
+{
+    border: 1px solid black;
+}
+
+.project-pod:hover .stack
+{
+    font-weight: bold;
+}
+
+.stack
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 50px;
+}
+
+
+.pod-content
+{
+    margin-top: 30px;
+}
+
