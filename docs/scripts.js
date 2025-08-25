@@ -1,55 +1,16 @@
 
-// Event listener function that shows text when the mouse is hovering over the "The promises you faked." image
-// and hides it when the mouse is not hovering over.
+// When the mouse is hovering over the graphic design image, the caption text is shown, and when the mouse is not over the image, the caption text is hidden.
+document.addEventListener("DOMContentLoaded", function() {
+    let graphicDesignPictures = document.querySelectorAll('.graphic-design-image');
+    let graphicDesignCaption = document.querySelectorAll('.caption_text');
 
-document.querySelector("#t_p_y_f_img").addEventListener('mouseover', function() {
-    document.querySelector("#t_p_y_f").style.visibility = 'visible';
-});
+    for (let i = 0; i < graphicDesignPictures.length; i++) {
+        graphicDesignPictures[i].addEventListener('mouseover', () => {
+            graphicDesignCaption[i].style.visibility = 'visible';
+        });
 
-document.querySelector("#t_p_y_f_img").addEventListener('mouseout', function() {
-    document.querySelector("#t_p_y_f").style.visibility = 'hidden';
-});
-
-// Event listener function that shows text when the mouse is hovering over the "Where do we go?" image
-// and hides it when the mouse is not hovering over.
-
-document.querySelector("#w_d_w_g_img").addEventListener('mouseover', function() {
-    document.querySelector("#w_d_w_g").style.visibility = 'visible';
-});
-
-document.querySelector("#w_d_w_g_img").addEventListener('mouseout', function() {
-    document.querySelector("#w_d_w_g").style.visibility = 'hidden';
-});
-
-// Event listener function that shows text when the mouse is hovering over the "Infinity, Forever" image
-// and hides it when the mouse is not hovering over.
-
-document.querySelector("#i_f_img").addEventListener('mouseover', function() {
-    document.querySelector("#i_f").style.visibility = 'visible';
-});
-
-document.querySelector("#i_f_img").addEventListener('mouseout', function() {
-    document.querySelector("#i_f").style.visibility = 'hidden';
-});
-
-// Event listener function that shows text when the mouse is hovering over the "The Fighter" image
-// and hides it when the mouse is not hovering over.
-
-document.querySelector("#t_f_img").addEventListener('mouseover', function() {
-    document.querySelector("#t_f").style.visibility = 'visible';
-});
-
-document.querySelector("#t_f_img").addEventListener('mouseout', function() {
-    document.querySelector("#t_f").style.visibility = 'hidden';
-});
-
-// Event listener function that shows text when the mouse is hovering over the "Baby, Psycho?" image
-// and hides it when the mouse is not hovering over.
-
-document.querySelector("#b_p_img").addEventListener('mouseover', function() {
-    document.querySelector("#b_p").style.visibility = 'visible';
-});
-
-document.querySelector("#b_p_img").addEventListener('mouseout', function() {
-    document.querySelector("#b_p").style.visibility = 'hidden';
-});
+        graphicDesignPictures[i].addEventListener('mouseout', ()=> {
+            graphicDesignCaption[i].style.visibility = 'hidden';
+        });
+    }
+})

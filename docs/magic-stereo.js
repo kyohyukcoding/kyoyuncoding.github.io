@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let instrumentalnessValue = document.querySelector("#instrumentalness-value").textContent;
         let popularityValue = document.querySelector("#popularity-value").textContent * 100;
         table.innerHTML = "";  
-        resetAll();
         fetch(assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energyValue, instrumentalnessValue, popularityValue))
         .then(response => response.json())
         .then(data => {
@@ -71,13 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector("dialog").showModal();
                 document.querySelector("#error-messages").style.display = "none";
             } else {
+                document.querySelector("#error-messages").style.display = "block";
                 document.querySelector("#error-messages").textContent = "Invalid Spotify URL."
             }
         })
         .catch(error => {
-            document.querySelector("#error-messages").textContent = "Invalid Spotify URL.";
             console.log("Error", error);
         });
+        resetAll();
         return false;
     }
 
@@ -117,6 +117,7 @@ function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energ
         "instrumentalness" : instrumentalnessValue,
         "popularity" : popularityValue,
     }
+
     let reccoBeatsCall = `https://api.reccobeats.com/v1/track/recommendation?size=15&seeds=${spotifyURI}`;
     for(let i = 0; i < checkBoxes.length; i++) {
         if(checkBoxes[i].checked) {
@@ -124,6 +125,7 @@ function assembleAPICall(spotifyURI, acousticnessValue, danceabilityValue, energ
             reccoBeatsCall += `&${parameterName}=${variableLookupObj[parameterName]}`
         }
     }
+    console.log(reccoBeatsCall);
     return reccoBeatsCall;
 };
 
