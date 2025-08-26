@@ -33,3 +33,4 @@ LEARNT:
 11. You can target the children of elements with CSS by putting their name after the first element. For example, like .project-pod .project-image {background-color: blue;}. This will turn the project image class element blue if it is within a project-pod element.
 12. Use the transform property to change the position of things by Y or X axis.
 13. To get everything in the grid to stack on mobile view, just set the number of columns to 1, so everything is stacked vertically.
+14. Use "column-gap: x;" to set a minimum gap between grid columns.

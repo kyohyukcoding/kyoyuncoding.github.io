@@ -209,7 +209,7 @@
 
     .magic-stereo-text
     {
-        font-size: 20px;
+        font-size: 1.5em;
     }
 
     #close-dialog
@@ -265,6 +265,7 @@
         margin: 3.5% auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 1%;
         grid-template-rows: 1fr;
     }
 
@@ -325,9 +326,6 @@
 
 .button:hover
 {
-    background-color: white;
-    border-radius: 5px;
-    margin-top: 25px;
     border-color:black;
     border-style: solid; 
 }
@@ -358,7 +356,7 @@
 
 .bottom_space
 {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .nav-link
@@ -471,6 +469,11 @@ a
 }
 
 .project-pod:hover .stack
+{
+    font-weight: bold
+}
+
+.project-pod:hover .text-bold
 {
     font-weight: bold;
 }
