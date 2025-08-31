@@ -34,3 +34,4 @@ LEARNT:
 12. Use the transform property to change the position of things by Y or X axis.
 13. To get everything in the grid to stack on mobile view, just set the number of columns to 1, so everything is stacked vertically.
 14. Use "column-gap: x;" to set a minimum gap between grid columns.
+15. Sometimes the Safari Web Browser doesn't like input elements, so used a button element rather than an input element.
