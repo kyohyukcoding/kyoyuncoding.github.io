@@ -432,3 +432,10 @@ a {
     top: -15px; 
     right: 12px;
 }
+
+.github-icon:hover {
+    width: 50px;
+    height: 45px;
+    right: 8px;
+    top: -20px;
+}
