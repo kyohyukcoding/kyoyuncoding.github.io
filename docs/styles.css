@@ -1,79 +1,67 @@
-@media(max-width: 600px) 
-{
-    .media-mobile
-    {
-        display: block; 
+@media(max-width: 600px) {
+    .media-mobile {
+        display: block;
         margin: 15px auto;
         width: 80%;
         height: 80%;
     }
 
-    .index-subheading
-    {
+    .index-subheading {
         font-size: 18.72px;
     }
-    
-    .embed-video
-    {
+
+    .embed-video {
         text-align: center;
         height: 144px;
-        width: 260px; 
+        width: 260px;
     }
 
-    .parameters-container-mobile
-    {
-        display: grid; 
+    .parameters-container-mobile {
+        display: grid;
         grid-template-columns: 50px 110px 125px 50px;
         grid-template-rows: 40px 40px 40px 40px 40px;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
         margin-top: 25px;
     }
 
-    .spotify-url-input-phone-size
-    {
+    .spotify-url-input-phone-size {
         width: 290px;
     }
 
-    .mobile-header-format
-    {
+    .mobile-header-format {
         text-align: center;
         margin-top: 8%;
         margin-right: 20%;
         margin-left: 20%;
     }
 
-    .parameters-form-mobile
-    { 
-        height: 25px; 
+    .parameters-form-mobile {
+        height: 25px;
         text-align: center;
     }
 
-    .error-message-mobile
-    {
-        text-align: center; 
-        color: red; 
-        margin-top: 15px; 
+    .error-message-mobile {
+        text-align: center;
+        color: red;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
 
-    .center-margin-mobile
-    {
+    .center-margin-mobile {
         padding: 20px 0 10px;
         text-align: center;
         margin-right: 15%;
         margin-left: 15%;
     }
 
-    .project-container
-    {
+    .project-container {
         margin: 3.5% auto;
         display: grid;
         grid-template-columns: 1fr;
     }
 
-    .project-pod
-    {
+    .project-pod {
         margin: auto;
         height: 551px;
         width: 310px;
@@ -83,16 +71,14 @@
         margin-top: 20px;
     }
 
-    .center_margin
-    {
+    .center_margin {
         padding: 20px 0;
         text-align: center;
         margin-right: 15%;
         margin-left: 15%;
     }
 
-    .project-image
-    {
+    .project-image {
         margin: auto;
         border: 1px solid rgb(179, 179, 179);
         height: 144px;
@@ -103,22 +89,19 @@
         position: relative;
     }
 
-    .pod-description
-    {
+    .pod-description {
         display: grid;
         justify-content: center;
         align-items: center;
     }
 
-    .project-image-align
-    {
-        width: 250px; 
+    .project-image-align {
+        width: 250px;
         transform: translateY(-15px);
         transform: translateX(-0px);
     }
 
-    .margin-mobile
-    {
+    .margin-mobile {
         padding: 20px 0;
         text-align: center;
         margin-right: 15%;
@@ -127,73 +110,62 @@
 }
 
 
-@media(min-width: 600px)
-{
+@media(min-width: 600px) {
 
-    .media-normal
-    {
-        display: block; 
+    .media-normal {
+        display: block;
         margin: 15px auto;
         width: 500px;
         height: 500px;
     }
 
-    .index-title
-    {
+    .index-title {
         font-size: 50px;
     }
 
-    .embed-video
-    {
+    .embed-video {
         text-align: center;
-        width: 330px; 
+        width: 330px;
         height: 185.6px;
     }
 
-    .spotify-url-input-desktop-size
-    {
+    .spotify-url-input-desktop-size {
         width: 550px;
         height: 30px;
         font-size: 20px;
     }
 
-    .parameters-form-desktop
-    { 
-        height: 25px; 
+    .parameters-form-desktop {
+        height: 25px;
         text-align: center;
     }
 
-    .parameters-form-desktop:hover
-    { 
-        height: 25px; 
+    .parameters-form-desktop:hover {
+        height: 25px;
         text-align: center;
         border-color: black
     }
 
-    .parameters-container-desktop
-    {
-        display: grid; 
-        grid-template-columns: 40px 140px 250px 35px;  
-        grid-template-rows: 65px 65px 65px 65px 65px; 
-        justify-content: center; 
-        align-items: center; 
+    .parameters-container-desktop {
+        display: grid;
+        grid-template-columns: 40px 140px 250px 35px;
+        grid-template-rows: 65px 65px 65px 65px 65px;
+        justify-content: center;
+        align-items: center;
         margin-top: 30px;
     }
 
-    .parameter-label
-    {
-        text-align: left;  
+    .parameter-label {
+        text-align: left;
         font-size: 20px;
     }
-    
-    .dialog-recommendations
-    {
-        margin: auto; 
+
+    .dialog-recommendations {
+        margin: auto;
         padding: 30px;
     }
 
-    .magic-stereo-header
-    {
+    .magic-stereo-header {
         text-align: center;
         margin-top: 4.5%;
         margin-right: 20%;
@@ -201,67 +173,59 @@
         font-size: 40px;
     }
 
-    .checkbox
-    {
+    .checkbox {
         height: 20px;
         width: 20px;
     }
 
-    .magic-stereo-text
-    {
+    .magic-stereo-text {
         font-size: 1.5em;
     }
 
-    #close-dialog
-    {
+    #close-dialog {
         font-size: 20px;
     }
 
-    #copy-to-clipboard
-    {
+    #copy-to-clipboard {
         font-size: 20px;
     }
 
-    #form-submit
-    {
+    #form-submit {
         margin-top: 30px;
         font-size: 20px;
     }
 
-    .range-value
-    {
+    .range-value {
         font-size: 20px;
     }
 
-    .range
-    {
+    .range {
         width: 225px;
     }
 
-    .error-message-desktop
-    {
-        text-align: center; 
-        color: red; 
-        margin-top: 30px; 
+    .error-message-desktop {
+        text-align: center;
+        color: red;
+        margin-top: 30px;
         margin-bottom: 20px;
         font-size: 20px;
     }
 
-    table, tr, th, td
-    {
+    table,
+    tr,
+    th,
+    td {
         font-size: 20px;
     }
 
-    .center_margin
-    {
+    .center_margin {
         padding: 20px 0;
         text-align: center;
         margin-right: 15%;
         margin-left: 15%;
     }
 
-    .project-container
-    {
+    .project-container {
         margin: 3.5% auto;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -269,18 +233,15 @@
         grid-template-rows: 1fr;
     }
 
-    #thinkdev-project
-    {
+    #thinkdev-project {
         grid-column-start: 2;
     }
 
-    #magic-stereo-project
-    {
+    #magic-stereo-project {
         grid-column-start: 3;
     }
 
-    .project-pod
-    {
+    .project-pod {
         margin: auto;
         height: 500px;
         width: 400px;
@@ -288,8 +249,7 @@
         border-radius: 15px;
     }
 
-    .project-image
-    {
+    .project-image {
         margin: auto;
         border: 1px solid rgb(179, 179, 179);
         height: 185px;
@@ -300,23 +260,20 @@
         position: relative;
     }
 
-    .pod-description
-    {
+    .pod-description {
         height: 150px;
         display: grid;
         justify-content: center;
         align-items: center;
     }
 
-    .project-image-align
-    {
-        width: 330px; 
+    .project-image-align {
+        width: 330px;
         transform: translateY(-3px);
     }
 }
 
-.button
-{
+.button {
     background-color: white;
     border-radius: 5px;
     margin-top: 25px;
@@ -324,162 +281,137 @@
     border-style: solid;
 }
 
-.button:hover
-{
-    border-color:black;
-    border-style: solid; 
+.button:hover {
+    border-color: black;
+    border-style: solid;
 }
 
-.caption_text
-{
+.caption_text {
     padding: 15px 0;
     text-align: center;
     margin-right: 20%;
     margin-left: 20%;
 }
 
-.header_format
-{
+.header_format {
     text-align: center;
     margin-top: 40px;
     margin-right: 20%;
     margin-left: 20%;
 }
 
-.sub_heading_format
-{
+.sub_heading_format {
     text-align: center;
     margin-top: 20px;
     margin-right: 20%;
     margin-left: 20%;
 }
 
-.bottom_space
-{
+.bottom_space {
     margin-bottom: 3%;
 }
 
-.nav-link
-{
+.nav-link {
     color: black;
 }
 
-.flex-text
-{
+.flex-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-table, tr, th, td
-{
+table,
+tr,
+th,
+td {
     padding: 5px;
     border: 1px solid black;
     border-collapse: collapse;
     text-align: center;
 }
 
-a
-{
+a {
     text-decoration: none;
 }
 
-.clickable-card
-{
+.clickable-card {
     text-decoration: none;
     color: inherit;
 }
 
-.dialog
-{
+.dialog {
     border-color: rgb(179, 179, 179);
 }
 
-.buttons-container
-{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button-left-margin
-{
+.button-left-margin {
     margin-left: 15px;
 }
 
-.row-one 
-{
+.row-one {
     grid-row-start: 1;
 }
 
-.row-two 
-{
+.row-two {
     grid-row-start: 2;
 }
 
-.row-three 
-{
+.row-three {
     grid-row-start: 3;
 }
 
-.row-four 
-{
+.row-four {
     grid-row-start: 4;
 }
 
-.row-five 
-{
+.row-five {
     grid-row-start: 5;
 }
 
-.column-one
-{
+.column-one {
     grid-column-start: 1
 }
 
-.column-two
-{
+.column-two {
     grid-column-start: 2
 }
 
-.column-three
-{
+.column-three {
     grid-column-start: 3
 }
 
-.column-four
-{
+.column-four {
     grid-column-start: 4
 }
 
-.column-five
-{
+.column-five {
     grid-column-start: 5
 }
 
-.project-pod:hover
-{
+.project-pod:hover {
     border: 1px solid black;
 }
 
-.project-pod:hover .project-image
-{
+.project-pod:hover .project-image {
     border: 1px solid black;
 }
 
-.project-pod:hover .stack
-{
+.project-pod:hover .stack {
     font-weight: bold
 }
 
-.project-pod:hover .text-bold
-{
+.project-pod:hover .text-bold {
     font-weight: bold;
 }
 
-.stack
-{
+.stack {
     display: grid;
     justify-content: center;
     align-items: center;
@@ -488,8 +420,15 @@ a
 }
 
 
-.pod-content
-{
+.pod-content {
+    position: relative;
     margin-top: 30px;
 }
 
+.github-icon {
+    position: absolute; 
+    width: 40px;
+    height: 40px;
+    top: -15px; 
+    right: 12px;
+}
